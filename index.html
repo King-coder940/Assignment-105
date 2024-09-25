@@ -38,14 +38,14 @@
 
 </head>
 
-<body class="lexend-font">
-  <header>
+<body class="lexend-font" class="Products">
+  <header class="sticky top-0 z-10 sticky top-0 z-10  bg-opacity-30 mb-0">
     <nav>
       <div
-        class=" navbar bg-yellow-300  backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-10 px-2 gap-1 mx-2 lg:px-8 lg:mx-0 ">
+        class=" navbar bg-yellow-300  backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-10 px-2 gap-1 mx-2 lg:px-8 lg:mx-0  ">
         <div class="navbar-start  ">
           <div tabindex="0" role="button" class="btn btn-ghost btn-circle ">
-            <button class="btn bg-c-primary ">Blog</button>
+            <button id="blog-btn" class="btn bg-c-primary ">Blog</button>
           </div>
         </div>
         <div class="navbar-center">
@@ -55,7 +55,7 @@
         <div class="navbar-end flex items-center gap-1 mr-2 lg:mr-0 ">
           <div><i><img src="./assets/coin.png" alt=""></i></div>
           <div>
-            <h1 class="font-semibold">5500 <span class="hidden lg:inline-block">BDT</span></h1>
+            <h1 id="text-input-field" class="font-semibold">5500 <span class="hidden lg:inline-block">BDT</span></h1>
           </div>
 
 
@@ -64,7 +64,7 @@
       </div>
     </nav>
     <section
-      class="flex justify-center mt-4 pt-3 sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30">
+      class="flex justify-center  pt-3 sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 h-full ">
       <div><button id="donation-btn" class="btn btn-lg bg-c-primary">Donate</button></div>
       <div><button id="history-btn" class="btn btn-lg">History</button></div>
 
@@ -72,7 +72,7 @@
 
   </header>
   <main>
-    <section id="card-container ">
+    <section id="card-form">
       <div >
         <div>
           <div class="lg:grid grid-cols-1">
@@ -90,7 +90,9 @@
                   in
                   need. Please donate today!</p>
                 <input id="input-field-one" type="text" placeholder="Amount" class="input input-ghost w-full max-w-xs" />
+        
                 <button id="donate-btn-one" class="btn btn-wide bg-c-primary">Donate Now</button>
+             
               </div>
             </div>
             <div>
@@ -101,12 +103,13 @@
                     <div class=" w-[20rem] grid  lg:grid gap-y-1 lg:w-[30rem]">
                       <div class="flex items-center gap-x-1 ">
                         <i><img src="./assets/coin.png" alt=""></i>
-                        <p id="amount-noakhali">0 BDT</p>
+                        <p id="amount-feni">0 BDT</p>
                       </div>
                       <h2 class="lg:text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                       <p>Help the people of Feni recover from the devastating recent floods. Your donation can provide essential relief such as food, clean water, and shelter. Together, we can rebuild lives and offer hope to those affected. Please donate today!</p>
                       <input id="input-field-two" type="text" placeholder="Amount" class="input input-ghost w-full max-w-xs" />
                       <button id="donate-btn-two" class="btn btn-wide bg-c-primary">Donate Now</button>
+                     
                     </div>
             </div>
             <div>
@@ -117,18 +120,34 @@
                     <div class=" w-[20rem] grid  lg:grid gap-y-1 lg:w-[30rem]">
                       <div class="flex items-center gap-x-1 ">
                         <i><img src="./assets/coin.png" alt=""></i>
-                        <p id="amount-noakhali">0 BDT</p>
+                        <p id="amount-quota">0 BDT</p>
                       </div>
                       <h2 class="lg:text-xl font-bold">Aid for Injured in the Quota Movement</h2>
                       <p>Support the families of those killed and injured in the recent quota protests in Bangladesh. Your donation can help provide medical care, financial assistance, and support for rebuilding lives. Together, we can stand in solidarity and bring relief to those in need. Please donate today!</p>
                       <input id="input-field-three" type="text" placeholder="Amount" class="input input-ghost w-full max-w-xs" />
                       <button id="donate-btn-three" class="btn btn-wide bg-c-primary">Donate Now</button>
+                      
                     </div>
             </div>
           </div>
         </div>
 
 
+    </section>
+    <section>
+      <div
+      id="history-form"
+      class=" hidden  bg-gradient-to-br  from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200"
+    >
+      <h3
+        class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+      >
+        🕒 Transaction History
+      </h3>
+      <div id="transaction-container" class=" hidden grid grid-cols-1 gap-y-3"></div>
+    </div>
+  </div>
+</div>
     </section>
     </div>
 
@@ -137,6 +156,10 @@
   <footer>
 
   </footer>
+  <script src="./js/utilities.js"></script>
+  <script src="./js/home.js"></script>
+  <script src="./js/features.js"></script>
+  
 
 </body>
 
