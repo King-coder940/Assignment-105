@@ -1,6 +1,6 @@
 
 document.getElementById('blog-btn').addEventListener('click', function () {
-    window.location = "/blog.html"
+    window.location = "./blog.html"
 })
 document.getElementById('donate-btn-one').addEventListener('click', function () {
     const amount = getInputFieldValueById('input-field-one');
